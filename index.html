@@ -36,20 +36,41 @@
         const random1 = Math.floor(Math.random() * 6) + 1;
 
         btn.addEventListener('click', function (e) {
-            const num = (document.getElementById('num')).value;
+            let num = (document.getElementById('num')).value;
 
             if(! num ) {
                 alert('input something, please!');
                 return;
             }
 
+            if(num > 6){
+                alert('input number 1 ~ 6, please');
+                return;   //相當等於break
+            }
+
+            // console.log("random:" + random1);//作弊用的
+
+            // console.log(typeof random1);
+            // console.log(typeof num);
+            num = parseInt(num);
+
+            if(num === random1){
+                alert('Good Job, You are right!!!');
+                return;
+            }
+            //基本上const跟final 一樣
+
+            if(num >random1){
+                alert('smaller,please!');
+                return;
+            }
+
+            alert('bigger, please');
 
 
-
-
-            console.log(random);
-            console.log(random1);
-            console.log(num);
+            // console.log(random);
+            // console.log(random1);
+            // console.log(num);
         });
 
 
