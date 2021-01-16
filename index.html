@@ -27,14 +27,14 @@
 
 </head>
 <body>
-    <h1>Guess Number</h1>
-    <input type="number" id="num">
-    <button id="btn">Guess</button>
-
+    <form action="javascript:;">
+        <h1>Guess Number</h1>
+        <input type="number" id="num" placeholder="請輸入1~6的數">
+        <button id="btn">Guess</button>
+    </form>
     <script>
     //    btoon = getElementById("btn");
     //    addEventListener("focus",btoon);
-       
 
 
         const num = document.getElementById('num');
@@ -50,6 +50,7 @@
             title: '你來亂的嗎?',
             text: '需要輸入數字',
             icon: 'error',
+            confirmButtonText: '我會好好反省'
             })
                 // alert('input something, please!');
                 return;
@@ -57,9 +58,10 @@
 
             if(num > 6){
             Swal.fire({
-            title: '',
+            title: '你是哪隻眼睛瞎了?',
             text: '請輸入1~6的數字',
             icon: 'question',
+            confirmButtonText: '對不起，我是智障'
             })
                 // alert('input number 1 ~ 6, please');
                 return;   //相當等於break
@@ -75,7 +77,7 @@
             Swal.fire({
             title: '棒',
             text: '你猜對了',
-            icon: 'sucess',
+            icon: 'success',
             })
                 // alert('Good Job, You are right!!!');
                 return;
