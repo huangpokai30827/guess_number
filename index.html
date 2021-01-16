@@ -32,12 +32,7 @@
     <button id="btn">Guess</button>
 
     <script>
-        Swal.fire({
-        title: 'Error!',
-        text: 'Do you want to continue',
-        icon: 'error',
-        confirmButtonText: 'Cool'
-        })
+       
 
 
         const num = document.getElementById('num');
@@ -49,12 +44,22 @@
             let num = (document.getElementById('num')).value;
 
             if(! num ) {
-                alert('input something, please!');
+            Swal.fire({
+            title: '你來亂的嗎?',
+            text: '需要輸入數字',
+            icon: 'error',
+            })
+                // alert('input something, please!');
                 return;
             }
 
             if(num > 6){
-                alert('input number 1 ~ 6, please');
+            Swal.fire({
+            title: '',
+            text: '請輸入1~6的數字',
+            icon: 'question',
+            })
+                // alert('input number 1 ~ 6, please');
                 return;   //相當等於break
             }
 
