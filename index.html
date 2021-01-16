@@ -32,6 +32,14 @@
     <button id="btn">Guess</button>
 
     <script>
+        Swal.fire({
+        title: 'Error!',
+        text: 'Do you want to continue',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+        })
+
+
         const num = document.getElementById('num');
         const btn = document.getElementById('btn');
         const random = Math.random();
