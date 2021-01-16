@@ -32,6 +32,8 @@
     <button id="btn">Guess</button>
 
     <script>
+    //    btoon = getElementById("btn");
+    //    addEventListener("focus",btoon);
        
 
 
@@ -70,17 +72,31 @@
             num = parseInt(num);
 
             if(num === random1){
-                alert('Good Job, You are right!!!');
+            Swal.fire({
+            title: '棒',
+            text: '你猜對了',
+            icon: 'sucess',
+            })
+                // alert('Good Job, You are right!!!');
                 return;
             }
             //基本上const跟final 一樣
 
             if(num >random1){
-                alert('smaller,please!');
+            Swal.fire({
+            title: '太大了',
+            text: '在小一點',
+            icon: 'warning',
+            })
+                // alert('smaller,please!');
                 return;
             }
-
-            alert('bigger, please');
+            Swal.fire({
+            title: '太小了',
+            text: '再大一點',
+            icon: 'warning',
+            })
+            // alert('bigger, please');
 
 
             // console.log(random);
